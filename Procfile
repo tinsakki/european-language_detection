@@ -1,0 +1,1 @@
+web: gunicorn europe_language_detection.wsgi --log-file -
