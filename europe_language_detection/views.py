@@ -26,7 +26,7 @@ labels = {
 'sv': "Swedish",
 }
 a = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-b = os.path.join(a,'europe_language_detection\model.pkl')
+b = os.path.join(a,'europe_language_detection/model.pkl')
 print(b)
 def load():
     with open(b, 'rb') as file:
