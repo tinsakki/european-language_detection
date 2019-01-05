@@ -25,7 +25,7 @@ SECRET_KEY = ')p+#xn4#6x13!z+)p29#+a55vfqy*opei4oqqxuz#82+xhzw=d'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1','localhost','127.0.0.1:8000']
+ALLOWED_HOSTS = ['127.0.0.1','localhost','127.0.0.1:8000','arcane-hamlet-47024.herokuapp.com']
 
 
 # Application definition
