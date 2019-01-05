@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import JsonResponse
 import pickle
+import os
 labels = {
 'bg': "Bulgarian",
 'cs': "Czech",
@@ -24,8 +25,10 @@ labels = {
 'sl': "Slovenian",
 'sv': "Swedish",
 }
+a = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+b = os.path.join(a,'model.pkl')
 def load():
-    with open(r'C:\Users\ajain\Desktop\europe_language_detection\europe_language_detection\model.pkl', 'rb') as file:
+    with open(b, 'rb') as file:
       vectorizer, clf = pickle.load(file)
     return vectorizer, clf
 
