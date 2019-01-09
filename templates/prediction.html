@@ -2,14 +2,40 @@
 	<html>
 	<head>
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700,800" rel="stylesheet">
 	<style type="text/css">
-body {
- background: url('https://brewminate.com/wp-content/uploads/2016/05/Languages02.png') no-repeat center center fixed;
- -webkit-background-size: cover;
- -moz-background-size: cover;
- -o-background-size: cover;
- background-size: cover;
-}
+	html{
+		height:100%
+	}
+
+	body {
+	 background: url('https://brewminate.com/wp-content/uploads/2016/05/Languages02.png') no-repeat center center fixed;
+	 -webkit-background-size: cover;
+	 -moz-background-size: cover;
+	 -o-background-size: cover;
+	 background-size: cover;
+	 height:inherit;
+	 display:flex;
+	 font-family:'Montserrat', sans-serif;
+	}
+
+	.content-section{
+		display:flex;
+		flex-direction:column;
+		justify-content:center;
+	}
+	.brand-heading{
+		font-weight: 800;
+		background-color: #ffffff;
+		width: fit-content;
+		margin-left: auto;
+		margin-right: auto;
+		color:#000000;
+	}
+	.btn-primary{
+		background-color: #024053;
+		border: 0;
+	}
 
 	</style>
 	</head>
@@ -17,18 +43,18 @@ body {
 	<body>
 	<section id="contact class" class="container content-section text-center">
 
-  <h1 style="color:black;">EUROPEAN LANGUAGE APP APP</h1>
+  <h1 class="brand-heading">EUROPEAN LANGUAGE APP</h1>
 
-  <div class="container-fluid">
+  <div>
     <div class="row">
       <div class="col-md-3"></div>
       <div class="col-md-6">
           <form id="responsiveForm" action="" method="POST">
-                {% csrf_token %}
+                <input type="hidden" name="csrfmiddlewaretoken" value="BM0yqzzxo89bOlF8gdsGFeJyKFTxD8VhHBdMyepC5wjTkSzlRxtBO52dhooqKKFw">
             <div class="form-group">
-              <h2 style="color:black;"><label>Enter The Language :</label> </h2>
+              <h2 style="color:black;background-color:#ffffff;width:fit-content;margin-left:auto;margin-right:auto;"><label>Enter The Language :</label> </h2>
 
-                    <textarea style="background-color: rgba(113,113,113,0.5);color:#fff;" class="form-control" rows="10" id="inputEmail"></textarea>
+                    <textarea style="background-color: #e8e8e8;color:#000000;border: 3px solid #000000;font-size: x-large;max-height: 250px;font-weight: 600;"  class="form-control" rows="10" id="inputEmail"></textarea>
 
                 </div>
             <div class="form-group">
@@ -44,23 +70,7 @@ body {
   </div>
 
 </section>
-
-	  <!--<div class="container">-->
-
-	      <!--<form class="form-signin" method="POST">-->
-	      <!--{% csrf_token %}-->
-
-	        <!--<label for="inputEmail" class="sr-only">Enter text</label>-->
-	        <!--<input type="text" id="inputEmail" class="form-control" placeholder="AKshay" required autofocus>-->
-	        <!--<button id="submit" class="btn btn-lg btn-primary btn-block" type="submit">Predict</button>-->
-	      <!--</form>-->
-
-	    <!--</div>-->
-		<!--<div>-->
-            <!--<h2 class="result-box"><strong id="result"></strong></h2>-->
-        <!--</div>-->
-
-	    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
  <script>
 
 //For getting CSRF token
