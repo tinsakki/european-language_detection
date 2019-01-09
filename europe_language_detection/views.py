@@ -27,15 +27,16 @@ labels = {
 }
 a = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 b = os.path.join(a,'europe_language_detection/model.pkl')
+
 def load():
     with open(b, 'rb') as file:
       vectorizer, clf = pickle.load(file)
     return vectorizer, clf
-from textblob import TextBlob
 vectorizer, classifer = load()
 
 def prediction(request):
     ans = ''
+    prediction = ''
     if request.method == 'POST':
         #POST goes here . is_ajax is must to capture ajax requests. Beginners pit.
         if request.is_ajax():
