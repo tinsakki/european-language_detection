@@ -3,23 +3,21 @@
 	<head>
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
 	<style type="text/css">
-<!--#responsiveForm{-->
-  <!--background-image: url("http://s02.justpaste.it/files/justpaste/d233/a9446587/playingcardtemplate_small.png");-->
-  <!--background-size: cover;-->
-  <!--background-size: 100% 100%;-->
+body {
+ background: url('https://brewminate.com/wp-content/uploads/2016/05/Languages02.png') no-repeat center center fixed;
+ -webkit-background-size: cover;
+ -moz-background-size: cover;
+ -o-background-size: cover;
+ background-size: cover;
+}
 
-  <!--min-height: 680px;-->
-  <!--padding: 80px;-->
-  <!--padding-top: 100px;-->
-<!--}-->
-h2 { font-weight: bold; }
 	</style>
 	</head>
 
 	<body>
 	<section id="contact class" class="container content-section text-center">
 
-  <h1 class="brand-heading">EUROPEAN LANGUAGE DETECTION APP</h1>
+  <h1 style="color:black;">EUROPEAN LANGUAGE APP APP</h1>
 
   <div class="container-fluid">
     <div class="row">
@@ -28,9 +26,11 @@ h2 { font-weight: bold; }
           <form id="responsiveForm" action="" method="POST">
                 {% csrf_token %}
             <div class="form-group">
-              <h2><label>Enter The Text :</label> </h2>
-              <textarea class="form-control" rows="10" id="inputEmail"></textarea>
-            </div>
+              <h2 style="color:black;"><label>Enter The Language :</label> </h2>
+
+                    <textarea style="background-color: rgba(113,113,113,0.5);color:#fff;" class="form-control" rows="10" id="inputEmail"></textarea>
+
+                </div>
             <div class="form-group">
               <button id="submit" class="btn btn-lg btn-primary btn-block" type="submit">Predict</button>
             </div>
@@ -102,18 +102,8 @@ function getCookie(name) {
         // handle a successful response
         success : function(json) {
             var text = document.createElement('i');
-            text.innerHTML = '<strong id="result">' + json['email'] + '</strong>';
+            text.innerHTML = '<div style="background-color:black;border: none;color:white;padding: 15px 32px;text-align: center;text-decoration: none;display: inline-block;font-size: 16px;margin: 4px 2px;cursor: pointer;" id="result">' + json['email'] + '</div>';
              $('#result').replaceWith(text);
-			<!--if (json['email']=='Positive'){-->
-                 <!--text.innerHTML = "<img src=\"static/images/positive.png\" width=\"150px\" height=\"100px\">";-->
-                <!--$('#result').replaceWith(text);-->
-		  <!--} else if (json['email']=='Neutral'){-->
-                <!--text.innerHTML = "<img src=\"static/images/neutral.png\" width=\"150px\" height=\"100px\">";-->
-                <!--$('#result').replaceWith(text);-->
-		  <!--} else {-->
-			<!--text.innerHTML = "<img src=\"static/images/negative.png\" width=\"150px\" height=\"100px\">";-->
-                <!--$('#result').replaceWith(text);-->
-		  <!--}-->
         },
 
         // handle a non-successful response
